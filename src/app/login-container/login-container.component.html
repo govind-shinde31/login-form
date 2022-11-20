@@ -1,0 +1,10 @@
+
+<h1>{{title}}</h1>
+
+parent - {{showLoginPage}} <br><br>
+
+
+
+<button type="button"  (click)="toggleTheme()">change theme</button>
+<app-login *ngIf="showLoginPage" [themechange]="theme" (showResetEvent)="reset($event)" ></app-login>
+<app-reset *ngIf="!showLoginPage" [themechange]="theme" (backLoginEvent)="reset($event)"></app-reset>
